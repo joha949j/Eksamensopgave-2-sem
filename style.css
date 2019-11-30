@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: 'open sans';
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*IFRAME*/
+.planway {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.iframe {
+    transform: scale(0.80);
+}
+
+/*HEADER + NAV*/
+header {
+    height: 20vh;
+    width: 100%;
+    background-color: grey;
+    margin: 0;
+}
+
+.nav_menu {
+    display: flex;
+    float: right;
+}
+
+.nav_menu a {
+    text-decoration: none;
+    color: black;
+    margin-right: 30px;
+}
+
+.logo_div {}
