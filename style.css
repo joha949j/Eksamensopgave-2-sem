@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    padding: 0;
     font-family: 'open sans';
 }
 
@@ -11,6 +12,8 @@ body {
 
 
 /*IFRAME*/
+/*
+
 .planway {
     display: flex;
     align-items: center;
@@ -21,24 +24,224 @@ body {
 .iframe {
     transform: scale(0.80);
 }
+*/
 
-/*HEADER + NAV*/
-header {
-    height: 20vh;
+/*forside test*/
+.grid-container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "img1 img2";
+}
+
+.grid_con1 {
+    /*    background: url(https://images.pexels.com/photos/3031397/pexels-photo-3031397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);*/
+    background: url(imgs/patrick_gida.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-area: img1;
+}
+
+.grid_con1 img {
+    background-size: cover;
+    height: 100%;
+}
+
+.grid_con2 {
+    /*    background: url(https://images.pexels.com/photos/1115204/pexels-photo-1115204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);*/
+    background: url(imgs/gida_2.jpg);
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: center;
+    display: grid;
+    grid-area: img2;
+}
+
+
+.gida {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gida h1 {
+    font-size: 17em;
+    color: #3745ee;
+
+}
+
+/*NAV*/
+
+.main_nav {
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: grey;
-    margin: 0;
+    height: 100px;
+    padding: 0px 130px 100px 100px;
+    box-sizing: border-box;
+    transition: 0.5s;
 }
 
-.nav_menu {
-    display: flex;
+.main_nav.black {
+    background: rgba(55, 69, 238, 0.6);
+    height: 80px;
+    padding: 10px 50px;
+}
+
+.main_nav.black a.active {
+    color: #000;
+}
+
+.logo {
+
+    float: left;
+    width: 100px;
+
+}
+
+.logo img {
+    height: 80px;
+    transition: 0.5s;
+}
+
+.main_nav.black .logo img {
+    height: 60px;
+
+}
+
+.main_nav ul {
     float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-.nav_menu a {
+.main_nav ul li {
+    list-style: none;
+
+}
+
+.main_nav ul li a {
+    line-height: 80px;
+    color: #000;
+    padding: 5px 20px;
     text-decoration: none;
-    color: black;
-    margin-right: 30px;
+    text-transform: uppercase;
+    transition: 0.5s;
+
 }
 
-.logo_div {}
+.main_nav.black ul li a {
+    color: #fff;
+    line-height: 60px;
+    opacity: 1;
+
+}
+
+.main_nav ul li a.active,
+.main_nav ul li a:hover {
+    color: #3745ee;
+    /*    text-decoration: underline;*/
+}
+
+
+/*KNAP*/
+#container {
+    position: absolute;
+    cursor: pointer;
+}
+
+.position {
+    right: 10.7vw;
+    bottom: 4vw;
+}
+
+
+
+.btn {
+    border-radius: 50px 50px;
+    border: #000;
+    color: #EE4037;
+    text-align: center;
+    font-size: 1em;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.4s;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
+    font-family: facto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.btn span {
+    position: relative;
+    transition: 0.4s;
+}
+
+.btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btn:hover span {
+    padding-right: 25px;
+}
+
+.btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/*SECTION*/
+
+section {
+    font-family: serif;
+    padding: 100px 200px;
+}
+
+
+
+/*footer*/
+footer {
+    background-color: #3745ee;
+    color: #e2e2e2;
+}
+
+.footer_grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 20px;
+    justify-content: flex-end;
+    align-content: center;
+    background-color: #3745ee;
+    width: 100vw;
+    height: 200px;
+    margin: 0 auto;
+    max-width: 1200px;
+    margin-bottom: 30px;
+    padding-right: 90px;
+}
+
+footer h2 {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+}
+
+footer p {
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 0.7em;
+}
