@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIDA - Booking</title>
+    <link rel="stylesheet" href="https://use.typekit.net/wzk3cpo.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="burger-menu">
+        <span>
+            <p>ME<br>NU</p>
+        </span>
+        <div id="menu">
+            <ul>
+                <li><a href="forsidetest.html">Home</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="styles.html" class="active">Styles</a></li>
+                <li><a href="#">Produkter</a></li>
+                <li><a href="#">Om os</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="main_nav">
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        <ul>
+            <li><a href="forsidetest.html">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#" class="active">Styles</a></li>
+            <li><a href="#">Produkter</a></li>
+            <li><a href="#">Om os</a></li>
+
+        </ul>
+    </nav>
+    <section id="low_fade">
+        <div class="styles_header">
+            <h1>styles</h1>
+        </div>
+        <div class="grid-low">
+            <div class="low_fade_header">
+                <h1>LOW FADE</h1>
+            </div>
+            <div id="booking_fixed" class="">
+                <a class="btn_fixed" href="booking.html"><span>BOOKING</span>
+                </a>
+            </div>
+            <div class="low1"></div>
+            <div class="low2"></div>
+            <div class="low3"></div>
+        </div>
+    </section>
+    <section id="mid_fade">
+        <div class="grid-mid">
+            <div class="mid_fade_header">
+                <h1>MID FADE</h1>
+            </div>
+            <div class="mid1"></div>
+            <div class="mid2"></div>
+            <div class="mid3"></div>
+        </div>
+    </section>
+    <section id="high_fade">
+        <div class="grid-high">
+            <div class="high_fade_header">
+                <h1>HIGH FADE</h1>
+            </div>
+            <div class="high1"></div>
+            <div class="high2"></div>
+            <div class="high3"></div>
+        </div>
+    </section>
+    <section id="tapered">
+        <div class="grid-tapered">
+            <div class="tape_fade_header">
+                <h1>TAPERED FADE</h1>
+            </div>
+            <div class="tape1"></div>
+            <div class="tape2"></div>
+            <div class="tape3"></div>
+        </div>
+    </section>
+
+
+
+
+
+    <footer>
+        <div class="footer_grid">
+            <div>
+                <h2>Åbningstider</h2>
+                <p>man-fre.10.00-18.00<br> lør. 10-.00-17.00</p>
+            </div>
+            <div>
+                <h2>Kontakt</h2>
+                <p>+45 42 33 37 51
+                    <br>Sorgenfrigade 6
+                    <br> 2200 København
+                </p>
+            </div>
+            <div>
+                <h2>Om Gida</h2>
+                <p></p>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        //DESKTOP NAV ANIMATION ON SCROLL
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            } else {
+                $('nav').removeClass('black')
+            }
+        })
+
+        //burgermenu
+        var burgerMenu = document.getElementById('burger-menu');
+        var overlay = document.getElementById('menu');
+        burgerMenu.addEventListener('click', function() {
+            this.classList.toggle("close");
+            overlay.classList.toggle("overlay");
+        });
+    </script>
+</body></html>

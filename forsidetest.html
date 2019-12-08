@@ -4,23 +4,38 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>forside test</title>
+    <title>GIDA - Homepage</title>
+    <link rel="stylesheet" href="https://use.typekit.net/wzk3cpo.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
     <div class="main_content">
+        <nav id="burger-menu">
+            <span></span>
+            <div id="menu">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Service</a></li>
+                    <li><a href="#">Styles</a></li>
+                    <li><a href="#">Produkter</a></li>
+                    <li><a href="#">Om os</a></li>
+                </ul>
+            </div>
+        </nav>
+
         <nav class="main_nav">
             <div class="logo">
-                <h1></h1>
-                <!--            <img src="https://toppng.com/public/uploads/preview/macaw-parrot-png-image-background-sleepover-zoo-book-11563013700eyoiu2gy9h.png" alt="logo">-->
+                <h1>LOGO</h1>
             </div>
             <ul>
                 <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Booking</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="styles.html">Styles</a></li>
                 <li><a href="#">Produkter</a></li>
+                <li><a href="#">Om os</a></li>
+
             </ul>
         </nav>
 
@@ -31,7 +46,7 @@
             </div>
 
             <div id="container" class="position">
-                <a class="btn" href="#"><span>BOOKING</span>
+                <a class="btn" href="booking.html"><span>BOOKING</span>
                 </a>
             </div>
             <div class="grid_con1">
@@ -42,9 +57,6 @@
 
         </div>
 
-        <section>
-            <h1>Lorem ipsum</h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur fugiat dignissimos labore, rem commodi quasi ut delectus adipisci molestiae necessitatibus nemo debitis eveniet unde et. Minus voluptas magnam consequuntur, velit expedita vel mollitia quibusdam facilis dicta, totam vero nostrum optio libero omnis sapiente corporis error dignissimos, amet ullam asperiores odio, soluta eligendi! Excepturi minus, ab optio alias quae dolor, ducimus vitae aliquam incidunt, fuga quod ex qui, fugiat iure accusamus facilis voluptatem mollitia. Accusantium nostrum reiciendis eum! Quisquam voluptas totam quam dolorem amet ducimus maxime soluta! Culpa repellendus quis eligendi iure ullam tempore est atque fugiat perspiciatis id, tempora facere!
-        </section>
         <footer>
             <div class="footer_grid">
                 <div>
@@ -68,6 +80,7 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script type="text/javascript">
+        //DESKTOP NAV ANIMATION ON SCROLL
         $(window).on('scroll', function() {
             if ($(window).scrollTop()) {
                 $('nav').addClass('black');
@@ -78,7 +91,12 @@
 
         })
 
+        //burgermenu
+        var burgerMenu = document.getElementById('burger-menu');
+        var overlay = document.getElementById('menu');
+        burgerMenu.addEventListener('click', function() {
+            this.classList.toggle("close");
+            overlay.classList.toggle("overlay");
+        });
     </script>
-</body>
-
-</html>
+</body></html>
