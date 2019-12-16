@@ -1,11 +1,24 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'open sans';
-    scroll-behavior: smooth;
     overflow-x: hidden;
 
 }
+
+/*
+h1 {
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+*/
+
+p {}
 
 * {
     box-sizing: border-box;
@@ -29,17 +42,11 @@ body {
     margin-bottom: 50px;
 }
 
-/*
-.booking_header {
-        margin: 30px 0px 0px 30px;
-    width: 100%;
-    height: 100px;
-}
-*/
+
 
 .booking_header h1 {
     font-family: canada-type-gibson, sans-serif;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 3.5px;
     font-style: normal;
     font-size: 4rem;
@@ -71,13 +78,51 @@ body {
 }
 
 .grid_con1 {
-    /*    background: url(https://images.pexels.com/photos/3031397/pexels-photo-3031397.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);*/
-    background: url(imgs/patrick_gida.jpg);
+    /*
+    background: url(fp_video.mp4);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+*/
     display: grid;
     grid-area: img1;
+}
+
+#fp_video {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    max-width: none;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+
+@media (min-aspect-ratio: 16/9) {
+
+    #fp_video {
+        width: 100vw;
+        height: auto;
+    }
+}
+
+
+@media (max-aspect-ratio: 16/9) {
+    #fp_video {
+        width: auto;
+        height: 100vh;
+    }
+}
+
+@supports (object-fit: cover) {
+    #fp_video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 .grid_con1 img {
@@ -86,10 +131,10 @@ body {
 }
 
 .grid_con2 {
-    /*    background: url(https://images.pexels.com/photos/1115204/pexels-photo-1115204.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);*/
-    background: url(imgs/gida_2.jpg);
+    background: url(imgs/GIDA/aligida/DSC_2192.jpg);
     background-repeat: no-repeat;
-    background-size: 70%;
+    background-size: cover;
+    margin: 14vw 9vw;
     background-position: center;
     display: grid;
     grid-area: img2;
@@ -103,8 +148,11 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.logo h1 {
-    font-size: 4em;
+.logo img {
+    cursor: pointer;
+    height: 100px;
+    width: 100px;
+
 }
 
 .gida h1 {
@@ -131,7 +179,8 @@ body {
 }
 
 .main_nav.black {
-    background: #3745ee;
+    background: rgba(0, 0, 0, 0.8);
+
     height: 80px;
     padding: 10px 50px;
 }
@@ -172,11 +221,12 @@ body {
 .main_nav ul li a {
     line-height: 80px;
     color: #000;
-    padding: 5px 20px;
+    padding: 2px 10px;
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.5s;
-    font-family: neue-haas-grotesk-text, sans-serif;
+    font-family: neue-haas-grotesk-text,
+        sans-serif;
     font-weight: 400;
     font-style: normal;
 
@@ -200,7 +250,7 @@ body {
 #container {
     position: absolute;
     cursor: pointer;
-    right: 10.7vw;
+    right: 6.5vw;
     bottom: 4vw;
 }
 
@@ -249,10 +299,12 @@ body {
 
 /*SECTION*/
 
+/*
 section {
     font-family: serif;
     padding: 100px 200px;
 }
+*/
 
 
 
@@ -260,20 +312,21 @@ section {
 footer {
     background-color: #000;
     color: #e2e2e2;
+    margin-top: 1vw;
 }
 
 .footer_grid {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(4, auto);
     grid-gap: 20px;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-content: center;
     background-color: #000;
     width: 100vw;
     height: 200px;
     margin: 0 auto;
     max-width: 1200px;
-    margin-bottom: 30px;
+    line-height: 30px;
     padding-right: 90px;
 
 }
@@ -291,6 +344,13 @@ footer p {
 }
 
 
+.omgida_footer img {
+    max-width: 30px;
+    padding-top: 5px;
+    padding-right: 3px;
+    cursor: pointer;
+}
+
 /*BURGERMENU*/
 
 #burger-menu {
@@ -303,6 +363,8 @@ footer p {
     z-index: 2;
 }
 
+
+
 #burger-menu span,
 #burger-menu span:before,
 #burger-menu span:after {
@@ -314,6 +376,20 @@ footer p {
     transition: 0.3s ease-in-out;
     font-size: 0.9em;
 }
+
+
+#burger-menu p {
+    font-family: urbane, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+#burger-menu a {
+    font-family: urbane, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
 
 #burger-menu span:before,
 #burger-menu span:after {
@@ -345,6 +421,8 @@ footer p {
     content: "";
     height: 4px;
     background: #3745ee;
+    z-index: 1000;
+
 
 }
 
@@ -359,6 +437,7 @@ footer p {
     content: "";
     height: 4px;
     background: #3745ee;
+    z-index: 1000;
 
 
 }
@@ -393,7 +472,7 @@ footer p {
     visibility: visible;
     opacity: 1;
     padding-top: 100px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 #menu li {
@@ -427,20 +506,45 @@ footer p {
 
 .low1 {
     grid-area: low1;
-    background: red;
+    background: url(imgs/GIDA/low/DSC_1979.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
 }
 
 .low2 {
     grid-area: low2;
-    background: blue;
-    width: 100%;
+    background: url(imgs/GIDA/mid/DSC_1966.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 65vh;
 }
 
 .low3 {
     grid-area: low3;
-    background: green;
+    background: url(imgs/GIDA/low/DSC_1978.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 35vh;
+}
+
+.next_button {
+    position: absolute;
+    bottom: 2vw;
+    right: 1vw;
+
+}
+
+.next1 {
+    text-decoration: none;
+    color: white;
+    font-family: canada-type-gibson, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    writing-mode: vertical-rl;
 }
 
 .styles_header h1 {
@@ -451,7 +555,7 @@ footer p {
     font-size: 4rem;
     color: #3745ee;
     position: absolute;
-    top: 15%;
+    top: 14%;
     left: 10%;
 }
 
@@ -468,7 +572,7 @@ footer p {
 }
 
 #booking_fixed {
-    position: fixed;
+    position: absolute;
     cursor: pointer;
     left: 2vw;
     bottom: 2vw;
@@ -531,18 +635,27 @@ footer p {
 
 .mid1 {
     grid-area: mid1;
-    background: red;
+    background: url(imgs/GIDA/mid/DSC_1933.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 100vh;
 }
 
 .mid2 {
     grid-area: mid2;
-    background: blue;
+    background: url(imgs/GIDA/mid/DSC_1929.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .mid3 {
     grid-area: mid3;
-    background: green;
+    background: url(imgs/GIDA/mid/DSC_2047.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .mid_fade_header {
@@ -574,7 +687,10 @@ footer p {
 
 .high1 {
     grid-area: high1;
-    background: green;
+    background: url(imgs/GIDA/high/DSC_2132.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 100vh;
 }
 
@@ -585,7 +701,10 @@ footer p {
 
 .high3 {
     grid-area: high3;
-    background: red;
+    background: url(imgs/GIDA/high/DSC_2144.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .high_fade_header {
@@ -616,18 +735,27 @@ footer p {
 
 .tape1 {
     grid-area: tape1;
-    background: red;
+    background: url(imgs/GIDA/tapp/DSC_2110.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: ;
 }
 
 .tape2 {
     grid-area: tape2;
-    background: blue;
+    background: url(imgs/GIDA/tapp/DSC_2105.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .tape3 {
     grid-area: tape3;
-    background: green;
+    background: url(imgs/GIDA/tapp/DSC_2113.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 100vh;
 }
 
@@ -644,10 +772,388 @@ footer p {
     transform: translate(-50%, -50%)
 }
 
+/*OM OS*/
+.grid-om {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+}
+
+.grid_om1 {
+    background: url(imgs/GIDA/aligida/DSC_1876.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-area: left;
+    height: 100vh;
+}
+
+.grid_om2 {
+    grid-area: right;
+    display: grid;
+}
+
+.om_txt {
+    display: flex;
+    flex-direction: column;
+    margin: 14vw 9vw;
+}
+
+.om_txt h1 {
+    font-family: canada-type-gibson, sans-serif;
+    font-weight: 500;
+    letter-spacing: 3.5px;
+    font-style: normal;
+    font-size: 4rem;
+    color: #3745ee;
+    float: top;
+}
+
+.om_txt p {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+
+}
+
+.grid_kontakt {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+}
+
+.left {
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr 0.8fr;
+    grid-template-rows: 0.5fr 0.5fr 1.3fr;
+    grid-template-areas: "header header header""info1 info2 info3""googlemaps googlemaps googlemaps";
+    grid-area: left;
+}
+
+.info_header {
+    grid-area: header;
+    padding: 50px 20px 0px 40px;
+}
+
+.info_txt1 {
+    grid-area: info1;
+    padding: 0 20px 0px 40px;
+}
+
+.info_txt2 {
+    grid-area: info2;
+    padding: 0 20px 0px 20px;
+}
+
+.info_txt3 {
+    grid-area: info3;
+    padding: 0 20px 0px 20px;
+}
+
+
+.google {
+    width: 100%;
+    height: 100%;
+}
+
+.google_maps {
+    width: 100%;
+    height: 88%;
+    padding: 0 20px 0px 20px;
+}
+
+
+.left h1 {
+    font-family: canada-type-gibson, sans-serif;
+    font-weight: 500;
+    letter-spacing: 3.5px;
+    font-style: normal;
+    font-size: 4rem;
+    color: #3745ee;
+    padding-bottom: 20px;
+}
+
+.left p {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.right {
+    /*
+    background: url(imgs/gida_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+*/
+    display: grid;
+    grid-area: right;
+    height: 100vh;
+    margin: 60px 20px;
+
+}
+
+
+/*
+#videoSplash {
+    width: 100%;
+    margin: 0;
+    max-width: 1000px;
+    object-fit: cover;
+
+}
+*/
+
+
+@media (min-aspect-ratio: 16/9) {
+
+    #videoSplash {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (max-aspect-ratio: 16/9) {
+    #videoSplash {
+        max-width: 700px;
+        height: 100%;
+    }
+}
+
+
+
+
+/*SERVICES*/
+.splash_service,
+.splash_produkt,
+.splash_om {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.splash_img_om {
+    margin: 150px 50px 80px 50px;
+    width: 100%;
+    background: url(imgs/GIDA/aligida/DSC_1876.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.splash_img {
+    margin: 150px 50px 80px 50px;
+    width: 100%;
+    background: url(imgs/gida_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.splash_img h1,
+.splash_img_om h1 {
+    font-family: canada-type-gibson, sans-serif;
+    font-weight: 500;
+    letter-spacing: 3.5px;
+    font-style: normal;
+    font-size: 4rem;
+    color: #3745ee;
+    position: absolute;
+    top: 14%;
+
+}
+
+.services {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.service_txt1,
+.service_txt2,
+.service_txt3 {
+    padding-right: 45px;
+    padding-left: 45px;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 0px;
+}
+
+.services p,
+.services h1 {
+    padding: 10px;
+}
+
+
+
+/*PRODUKTER*/
+.img_produkt {
+    margin: 150px 50px 80px 50px;
+    width: 100%;
+    background: url(imgs/gida_produkt.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.img_produkt h1 {
+    font-family: canada-type-gibson, sans-serif;
+    font-weight: 500;
+    letter-spacing: 3.5px;
+    font-style: normal;
+    font-size: 4rem;
+    color: #3745ee;
+    position: absolute;
+    top: 14%;
+}
+
+
+
+.text_center {
+    margin: 5vw 0 8vw 0;
+}
+
+
+#knapper {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw;
+
+}
+
+.text_center button {
+    cursor: pointer;
+    border: none;
+    font-size: 0.8rem;
+    color: #3745ee;
+    font-weight: 500;
+}
+
+.produkt_boxes {
+    margin: 1vw 1vw;
+    padding: 50px;
+    ;
+}
+
+.billede {
+    width: 100%;
+    padding: 1vw;
+}
+
+.title,
+.pris {
+    padding: 1vw;
+}
+
+#container_service {
+    position: fixed;
+    cursor: pointer;
+    right: 1vw;
+    bottom: 3vw;
+}
+
+
+/*singleview*/
+
+
+.luk {
+    position: absolute;
+    top: 5%;
+    right: 8%;
+    font-size: 2rem;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    color: #0000ff;
+    cursor: pointer;
+}
+
+.produkt_sv {
+    margin: 3vw 3vw;
+    padding: 0;
+    /*
+    display: grid;
+    grid-template-columns: 47vw 47vw;
+    justify-content: space-between;
+*/
+}
+
+.produkt_sv article {
+    margin-bottom: 4vw;
+    padding: 10vw;
+}
+
+.imgvidere {
+    width: 100%;
+}
+
+.singleview h2 {
+    text-align: left;
+    font-size: 1.8xrem;
+}
+
+p.beskrivelse {
+    margin: 1vw;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+h2.title {
+    text-align: left;
+    font-family: canada-type-gibson, sans-serif;
+    font-weight: 500;
+    letter-spacing: 3.5px;
+    font-style: normal;
+    font-size: 2rem;
+    color: #3745ee;
+    /*    padding: 50px;*/
+}
+
+article {
+    padding: 0;
+}
+
+.imgsingle {
+    width: 100%;
+    justify-content: flex-end;
+    max-width: 600px;
+}
+
+h3.pris {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #3745ee;
+    /*    padding-left: 50px;*/
+}
+
+
+
+.imgvidere {
+    max-width: 500px;
+    order: 1;
+    margin: 4vw;
+}
+
 
 
 
 /*MEDIA QUERRYS*/
+
+/*FRA STOR TIL LILLE*/
 @media screen and (max-width: 937px) {
     .grid_con2 {
         display: none;
@@ -676,21 +1182,312 @@ footer p {
         font-size: 1.5em;
     }
 
+    #container {
+        right: 1vw;
+    }
+
     #burger-menu span,
     #burger-menu span:before,
     #burger-menu span:after {
         display: block;
     }
 
+    .grid_om1 {
+        display: none;
+    }
+
+    .grid_om2 {
+        width: 100vw;
+    }
+
+    .low2,
+    .low3 {
+        display: none;
+    }
+
+    .om4 {
+        display: none;
+    }
+
+    .om3 {
+        width: 100vw;
+    }
+
+    .grid-low,
+    .grid-mid,
+    .grid-high,
+    .grid-tapered {
+        display: block;
+    }
+
+    .footer_grid {
+        padding: 0;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .left {
+        width: 100vw;
+    }
+
+    .right {
+        display: none;
+    }
+
+    .om_txt {
+        padding-right: 0;
+        padding-left: 50px;
+    }
+
+    h2.title {
+        font-size: 2rem;
+        padding: 50px;
+    }
+
+    h3.pris {
+        font-size: 1.5rem;
+        padding-left: 50px;
+    }
+
+    .beskrivelse {
+        padding-left: 50px;
+    }
+
+    .next_button {
+        display: none;
+    }
+
 
 }
 
+
+/*FRA LILLE TIL STOR*/
 @media screen and (min-width: 937px) {
-    .booking_header h1 {
+
+    .booking_header h1,
+    .om_txt h1,
+    .styles_header h1,
+    .splash_img h1,
+    .img_produkt h1,
+    .splash_img_om h1 {
         font-size: 8rem;
     }
 
+    .splash_img h1,
+    .img_produkt h1,
+    .styles_header h1,
+    .splash_img_om h1 {
+        top: 8.5%;
+    }
+
     .styles_header h1 {
+        left: 3%;
+    }
+
+    .services {
+
+        flex-direction: row;
+    }
+
+    .service_txt1,
+    .service_txt2,
+    .service_txt3 {
+        padding-right: 55px;
+        padding-left: 55px;
+    }
+
+    #knapper {
+        width: 600px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .text_center button {
+        font-size: 1.5rem;
+    }
+
+    .produkt_boxes {
+        display: grid;
+        grid-template-columns: 31vw 31vw 31vw;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .produkt_sv {
+        margin: 3vw 3vw;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 47vw 47vw;
+        justify-content: space-between;
+    }
+
+    .luk {
+        top: 27%;
+        left: 4%;
+    }
+
+    .low1 {
+        height: 65vh;
+    }
+
+    #container_service {
+        right: 6.5vw;
+    }
+
+    #fp_video {
+        grid-area: img1;
+        width: 50vw;
+    }
+
+
+
+}
+
+/*OM GIDA NY*/
+
+
+.omgida {
+    display: flex;
+    flex-direction: column;
+}
+
+.omgida_txt {
+    padding: 10px 45px;
+    padding-bottom: 45px;
+
+}
+
+.omgida_txt p,
+.omgida_txt h1 {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 10px;
+}
+
+.omgida_img {
+    padding-bottom: 45px;
+}
+
+.omgida_img img {
+    width: 100%;
+    padding-right: 45px;
+    padding-left: 45px;
+}
+
+.img_om {
+    background: url(imgs/GIDA/aligida/DSC_1876.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.kontakt_om {
+    display: flex;
+    padding-top: 50px;
+
+}
+
+.kontakt_header {
+    padding-left: 50px;
+    font-family: canada-type-gibson, sans-serif;
+    font-weight: 500;
+    letter-spacing: 3.5px;
+    font-style: normal;
+    font-size: 4rem;
+    padding-bottom: 10vw;
+    color: #3745ee;
+
+
+}
+
+.kontakt_oplysninger {
+    padding-right: 45px;
+    padding-left: 45px;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-bottom: 0px;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+}
+
+.kontakt_oplysninger img {
+    max-width: 50px;
+}
+
+.videoDiv video {
+    height: 50%;
+    width: 100%;
+}
+
+.kontakt_oplysninger p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kontakt_oplysninger h2 {
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
+    font-style: bold;
+    padding-top: 10px;
+}
+
+@media screen and (min-width: 937px) {
+
+    .omgida {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .omgida_txt {
+        flex-basis: 500px;
+        flex-grow: 1;
+        width: 50vw;
+    }
+
+    .omgida_img {
+        display: flex;
+        flex-basis: 500px;
+        flex-grow: 1;
+        height: 100%;
+        padding-bottom: 20px;
+        padding-right: 45px;
+    }
+
+    .grid-om-gide {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "left right";
+    }
+
+    .img_om {
+        grid-area: left;
+    }
+
+
+    .kontakt_oplysninger {
+        flex-direction: row;
+    }
+
+    .videoDiv {
+        padding: 50px;
+        width: 100%;
+
+    }
+
+    .kontakt_header {
+        padding-bottom: 50px;
         font-size: 8rem;
     }
+
+
 }

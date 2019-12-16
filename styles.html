@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GIDA - Booking</title>
     <link rel="stylesheet" href="https://use.typekit.net/wzk3cpo.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -17,30 +19,34 @@
         <div id="menu">
             <ul>
                 <li><a href="forsidetest.html">Home</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="styles.html" class="active">Styles</a></li>
-                <li><a href="#">Produkter</a></li>
-                <li><a href="#">Om os</a></li>
+                <li><a href="services.html">Service</a></li>
+                <li><a href="produkter.html">Produkter</a></li>
+                <li><a href="#" class="active">Styles</a></li>
+                <li><a href="om.html">Om os</a></li>
+                <li><a href="booking.html">Booking</a></li>
+
             </ul>
         </div>
     </nav>
 
     <nav class="main_nav">
         <div class="logo">
-            <h1>LOGO</h1>
-        </div>
+            <a href="forsidetest.html">
+                <img src="imgs/Logotest1.svg" alt="logo"></a> </div>
         <ul>
             <li><a href="forsidetest.html">Home</a></li>
-            <li><a href="#">Service</a></li>
+            <li><a href="services.html">Service</a></li>
+            <li><a href="produkter.html">Produkter</a></li>
             <li><a href="#" class="active">Styles</a></li>
-            <li><a href="#">Produkter</a></li>
-            <li><a href="#">Om os</a></li>
+            <li><a href="om.html">Om os</a></li>
+            <li><a href="booking.html">Booking</a></li>
+
 
         </ul>
     </nav>
-    <section id="low_fade">
+    <section id="low_fade" data-aos="fade-up">
         <div class="styles_header">
-            <h1>styles</h1>
+            <h1>Styles</h1>
         </div>
         <div class="grid-low">
             <div class="low_fade_header">
@@ -50,37 +56,58 @@
                 <a class="btn_fixed" href="booking.html"><span>BOOKING</span>
                 </a>
             </div>
+            <div class="next_button"><a class="next1" href="#mid_fade">MID FADE ></a>
+            </div>
             <div class="low1"></div>
             <div class="low2"></div>
             <div class="low3"></div>
         </div>
     </section>
-    <section id="mid_fade">
+    <section id="mid_fade" data-aos="fade-up">
         <div class="grid-mid">
             <div class="mid_fade_header">
                 <h1>MID FADE</h1>
+            </div>
+            <div id="booking_fixed" class="">
+                <a class="btn_fixed" href="booking.html"><span>BOOKING</span>
+                </a>
+            </div>
+            <div class="next_button"><a class="next1" href="#high_fade">HIGH FADE ></a>
             </div>
             <div class="mid1"></div>
             <div class="mid2"></div>
             <div class="mid3"></div>
         </div>
     </section>
-    <section id="high_fade">
+    <section id="high_fade" data-aos="fade-up">
         <div class="grid-high">
             <div class="high_fade_header">
                 <h1>HIGH FADE</h1>
+            </div>
+            <div id="booking_fixed" class="">
+                <a class="btn_fixed" href="booking.html"><span>BOOKING</span>
+                </a>
+            </div>
+            <div class="next_button"><a class="next1" href="#tapered">TAPERED></a>
             </div>
             <div class="high1"></div>
             <div class="high2"></div>
             <div class="high3"></div>
         </div>
     </section>
-    <section id="tapered">
+    <section id="tapered" data-aos="fade-up">
         <div class="grid-tapered">
             <div class="tape_fade_header">
-                <h1>TAPERED FADE</h1>
+                <h1>TAPERED</h1>
             </div>
-            <div class="tape1"></div>
+            <div id="booking_fixed" class="">
+                <a class="btn_fixed" href="booking.html"><span>BOOKING</span>
+                </a>
+            </div>
+            <div class="next_button"><a class="next1" href="#low_fade">
+                    TOP</a> </div>
+            <div class="tape1">
+            </div>
             <div class="tape2"></div>
             <div class="tape3"></div>
         </div>
@@ -103,15 +130,23 @@
                     <br> 2200 København
                 </p>
             </div>
-            <div>
+            <div class="omgida_footer">
                 <h2>Om Gida</h2>
-                <p></p>
+                <img src="imgs/facebook_icon.png" alt="facebookicon">
+                <img src="imgs/instagram_icon.png" alt="igicon">
+                <!--                <img src="imgs/youtube_icon.png" alt="youtubeicon">-->
+
+
             </div>
         </div>
 
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <script type="text/javascript">
         //DESKTOP NAV ANIMATION ON SCROLL
         $(window).on('scroll', function() {

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIDA - Homepage</title>
+    <link rel="stylesheet" href="https://use.typekit.net/wzk3cpo.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <main class="main_content">
+        <nav id="burger-menu">
+            <span>
+                <p>ME<br>NU</p>
+            </span>
+            <div id="menu">
+                <ul>
+                    <li><a href="forsidetest.html">Home</a></li>
+                    <li><a href="services.html">Service</a></li>
+                    <li><a href="styles.html">Styles</a></li>
+                    <li><a href="produkter.html">Produkter</a></li>
+                    <li><a href="om.html">Om os</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="main_nav">
+            <div class="logo">
+                <a href="forsidetest.html">
+                    <img src="imgs/Logotest1.svg" alt="logo"></a>
+            </div>
+            <ul>
+                <li><a href="forsidetest.html">Home</a></li>
+                <li><a href="services.html">Service</a></li>
+                <li><a href="styles.html">Styles</a></li>
+                <li><a href="produkter.html">Produkter</a></li>
+                <li><a href="om.html">Om os</a></li>
+
+            </ul>
+        </nav>
+
+        <button class="luk" href="produkter.html">←</button>
+
+        <section id="single" class="produkt_sv">
+            <div class="singleview-info">
+                <article>
+                    <h2 class="title"></h2>
+                    <p class="info"></p>
+                    <!--                    <p class="beskrivelse">BESKRIVELSE Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis omnis molestias saepe doloribus, corrupti, voluptas iusto eos cumque facilis? Minus nam voluptas neque, blanditiis non, quas alias omnis itaque maiores fuga, possimus aspernatur doloremque distinctio incidunt beatae placeat quam quibusdam ipsam. Nisi suscipit, sapiente dolore voluptates cumque, vel earum aperiam dignissimos aspernatur reprehenderit id distinctio nobis numquam ipsam ratione tenetur?</p>-->
+                    <h3 class="pris"></h3>
+
+
+                </article>
+                <div class="imgcontainer"></div>
+
+            </div>
+
+            <img class="imgvidere" src="" alt="">
+
+            <template>
+                <img class="imgsingle" src="" alt="">
+            </template>
+        </section>
+    </main>
+    <footer>
+        <div class="footer_grid">
+            <div>
+                <h2>Åbningstider</h2>
+                <p>man-fre.10.00-18.00<br> lør. 10-.00-17.00</p>
+            </div>
+            <div>
+                <h2>Kontakt</h2>
+                <p>+45 42 33 37 51
+                    <br>Sorgenfrigade 6
+                    <br> 2200 København
+                </p>
+            </div>
+            <div class="omgida_footer">
+                <h2>Om Gida</h2>
+                <img src="imgs/facebook_icon.png" alt="facebookicon">
+                <img src="imgs/instagram_icon.png" alt="igicon">
+                <!--                <img src="imgs/youtube_icon.png" alt="youtubeicon">-->
+
+
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="text/javascript">
+        let produkter = [];
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id");
+        let navn = urlParams.get("navn");
+        const skabelon = document.querySelector("template");
+        const liste = document.querySelector(".produkt_boxes");
+        let menuArray;
+        const produkterUrl = "http://mathiaswind.dk/kea/Gida/wordpress/wp-json/wp/v2/produkter/";
+
+
+        window.addEventListener("load", sidenVises);
+
+        function sidenVises() {
+            console.log("sidenVises");
+
+            //            document.addEventListener("DOMContentLoaded", hentJson);
+
+            hentJson();
+
+        }
+
+        async function hentJson() {
+            const response = await fetch(produkterUrl);
+            produkter = await response.json();
+            console.log(produkter);
+
+            visProdukt();
+        }
+
+        function visProdukt() {
+
+            produkter.forEach(produkt => {
+
+                if (produkt.id == id) {
+
+                    document.querySelector(".imgvidere").src = produkt.billed[0].guid;
+                    console.log("lol");
+                    document.querySelector(".imgcontainer").src = produkt.billed[0].guid;
+                    console.log("lol2");
+
+
+
+                    console.log(produkt.billed);
+
+                    produkt.billed.forEach(b => {
+                        console.log(b.guid);
+
+                        const klon = skabelon.cloneNode(true).content;
+
+                        //                        klon.querySelector(".imgsingle").src = b.guid;
+
+                        document.querySelector(".imgcontainer").appendChild(klon);
+                    })
+
+                    document.querySelector(".title").textContent = produkt.title.rendered;
+
+                    document.querySelector(".pris").textContent = `${produkt.pris} DKK`;
+
+                    document.querySelector(".info").textContent = produkt.beskrivelse;
+
+                }
+            })
+
+        }
+        document.querySelector(".luk").addEventListener("click", () => {
+            history.back();
+        });
+        //DESKTOP NAV ANIMATION ON SCROLL
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            } else {
+                $('nav').removeClass('black')
+            }
+
+
+        })
+
+        //burgermenu
+        var burgerMenu = document.getElementById('burger-menu');
+        var overlay = document.getElementById('menu');
+        burgerMenu.addEventListener('click', function() {
+            this.classList.toggle("close");
+            overlay.classList.toggle("overlay");
+        });
+
+        AOS.init();
+    </script>
+</body></html>

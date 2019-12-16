@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIDA - Homepage</title>
+    <link rel="stylesheet" href="https://use.typekit.net/wzk3cpo.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="main_content">
+        <nav id="burger-menu">
+            <span>
+                <p>ME<br>NU</p>
+            </span>
+            <div id="menu">
+                <ul>
+                    <li><a href="forsidetest.html">Home</a></li>
+                    <li><a href="services.html">Service</a></li>
+                    <li><a href="#">Produkter</a></li>
+                    <li><a href="styles.html">Styles</a></li>
+                    <li><a href="om.html">Om os</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="main_nav">
+            <div class="logo">
+                <a href="forsidetest.html">
+                    <img src="imgs/Logotest1.svg" alt="logo"></a>
+            </div>
+            <ul>
+                <li><a href="forsidetest.html">Home</a></li>
+                <li><a href="services.html">Service</a></li>
+                <li><a href="produkter.html">Produkter</a></li>
+                <li><a href="styles.html">Styles</a></li>
+                <li><a href="om.html" class="active">Om os</a></li>
+                <li><a href="booking.html">Booking</a></li>
+
+
+            </ul>
+        </nav>
+
+
+        <div class="grid-om">
+            <div id="container" class="position">
+                <a class="btn" href="booking.html"><span>BOOKING</span>
+                </a>
+            </div>
+
+            <div class="grid_om1" data-aos="fade-up">
+            </div>
+            <div class="grid_om2" data-aos="fade-up">
+                <div class="om_txt">
+                    <h1>Om os</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, odio pariatur nihil ipsa dolore beatae animi enim sequi quidem cupiditate rerum nostrum, molestias vitae, provident in cumque. Sequi corporis exercitationem id in fuga sint neque molestias doloribus animi quis excepturi eligendi inventore natus nemo vero dolor sapiente rerum quam, esse repellat commodi dicta nam nostrum ad iste!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid_kontakt">
+            <div class="right" data-aos="fade-up">
+                <div class="google">
+                    <iframe class="google_maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.6056549826467!2d12.543213115816556!3d55.695843480538166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253ad54ecc953%3A0x8218457555b8dffc!2sSorgenfrigade%206%2C%202200%20K%C3%B8benhavn!5e0!3m2!1sda!2sdk!4v1575851175006!5m2!1sda!2sdk" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
+            </div>
+
+            <div class="left" data-aos="fade-up">
+                <div class="info_header">
+                    <h1>Kontakt</h1>
+                </div>
+                <div class="info_txt1">
+                    <h3>Åbningstider</h3>
+                    <p> man-fre.10.00-18.00<br>
+                        lør. 10-.00-17.00</p>
+                </div>
+                <div class="info_txt2">
+                    <h3>Kontakt</h3>
+                    <p>+45 42 33 37 51<br>
+                        Sorgenfrigade 6,<br>
+                        2200 København</p>
+                </div>
+                <div class="info_txt3">
+                    <h3>Om Gida</h3>
+                    <p>Noget om gida her<Br> Social links bla bla.</p>
+                </div>
+
+                <!--                <div class="video_div"><video src="drone_splash_video.mp4"></video></div>-->
+
+            </div>
+
+        </div>
+
+
+        <footer>
+            <div class="footer_grid">
+                <div>
+                    <h2>Åbningstider</h2>
+                    <p>man-fre.10.00-18.00<br> lør. 10-.00-17.00</p>
+                </div>
+                <div>
+                    <h2>Kontakt</h2>
+                    <p>+45 42 33 37 51
+                        <br>Sorgenfrigade 6
+                        <br> 2200 København
+                    </p>
+                </div>
+                <div class="omgida_footer">
+                    <h2>Om Gida</h2>
+                    <img src="imgs/facebook_icon.png" alt="facebookicon">
+                    <img src="imgs/instagram_icon.png" alt="igicon">
+                    <!--                <img src="imgs/youtube_icon.png" alt="youtubeicon">-->
+
+
+                </div>
+            </div>
+
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script type="text/javascript">
+        //DESKTOP NAV ANIMATION ON SCROLL
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop()) {
+                $('nav').addClass('black');
+            } else {
+                $('nav').removeClass('black')
+            }
+
+
+        })
+
+        //burgermenu
+        var burgerMenu = document.getElementById('burger-menu');
+        var overlay = document.getElementById('menu');
+        burgerMenu.addEventListener('click', function() {
+            this.classList.toggle("close");
+            overlay.classList.toggle("overlay");
+        });
+    </script>
+</body></html>
