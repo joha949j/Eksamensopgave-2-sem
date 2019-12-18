@@ -46,7 +46,7 @@ p {}
 
 .booking_header h1 {
     font-family: canada-type-gibson, sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 3.5px;
     font-style: normal;
     font-size: 4rem;
@@ -70,6 +70,7 @@ p {}
 
 /*forside test*/
 .grid-container {
+    overflow: hidden;
     display: grid;
     height: 100vh;
     grid-template-columns: 1fr 1fr;
@@ -78,24 +79,17 @@ p {}
 }
 
 .grid_con1 {
-    /*
-    background: url(fp_video.mp4);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-*/
     display: grid;
     grid-area: img1;
 }
 
 #fp_video {
     position: absolute;
-    width: 100%;
+    width: 100vw;
     margin: 0 auto;
     max-width: none;
     object-fit: cover;
     z-index: -1;
-
 }
 
 
@@ -131,7 +125,9 @@ p {}
 }
 
 .grid_con2 {
-    background: url(imgs/GIDA/aligida/DSC_2192.jpg);
+    background: url(imgs/GIDA/aligida/DSC_1876.jpg);
+
+
     background-repeat: no-repeat;
     background-size: cover;
     margin: 14vw 9vw;
@@ -150,8 +146,7 @@ p {}
 
 .logo img {
     cursor: pointer;
-    height: 100px;
-    width: 100px;
+    transform: scale(1.9);
 
 }
 
@@ -163,6 +158,7 @@ p {}
     font-style: normal;
 
 }
+
 
 /*NAV*/
 
@@ -186,7 +182,7 @@ p {}
 }
 
 .main_nav.black a.active {
-    color: #000;
+    color: #3745ee;
 }
 
 .logo {
@@ -269,7 +265,7 @@ p {}
     cursor: pointer;
     margin: 5px;
     text-decoration: none;
-    font-family: canada-type-gibson, sans-serif;
+    font-family: neue, sans-serif;
     font-weight: 500;
     font-style: normal;
 }
@@ -317,8 +313,8 @@ footer {
 
 .footer_grid {
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 20px;
+    grid-template-columns: 1fr 0.5fr 0.5fr 0.5fr;
+    grid-gap: 0px;
     justify-content: flex-start;
     align-content: center;
     background-color: #000;
@@ -326,7 +322,7 @@ footer {
     height: 200px;
     margin: 0 auto;
     max-width: 1200px;
-    line-height: 30px;
+    line-height: 20px;
     padding-right: 90px;
 
 }
@@ -334,7 +330,7 @@ footer {
 footer h2 {
     font-family: sans-serif;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 0.9em;
 }
 
 footer p {
@@ -490,6 +486,11 @@ footer p {
 
 
 /*STYLES HTML SIDE*/
+
+.body_styles {
+    background-color: #000;
+}
+
 #low_fade {
     height: 100vh;
     padding: 0;
@@ -507,6 +508,7 @@ footer p {
 .low1 {
     grid-area: low1;
     background: url(imgs/GIDA/low/DSC_1979.jpg);
+
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -534,17 +536,18 @@ footer p {
 .next_button {
     position: absolute;
     bottom: 2vw;
-    right: 1vw;
+    left: 1vw;
 
 }
 
 .next1 {
     text-decoration: none;
-    color: white;
+    color: #EE4037;
     font-family: canada-type-gibson, sans-serif;
     font-weight: 500;
     font-style: normal;
     writing-mode: vertical-rl;
+    font-size: 2rem;
 }
 
 .styles_header h1 {
@@ -563,7 +566,7 @@ footer p {
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 2rem;
     color: #fff;
     position: absolute;
     top: 50%;
@@ -574,7 +577,7 @@ footer p {
 #booking_fixed {
     position: absolute;
     cursor: pointer;
-    left: 2vw;
+    right: 2vw;
     bottom: 2vw;
     z-index: 100;
 }
@@ -582,7 +585,7 @@ footer p {
 .btn_fixed {
     border-radius: 50px 50px;
     border: #000;
-    color: #fff;
+    color: #EE4037;
     text-align: center;
     font-size: 1em;
     padding: 20px;
@@ -591,8 +594,8 @@ footer p {
     cursor: pointer;
     margin: 5px;
     text-decoration: none;
-    font-family: canada-type-gibson, sans-serif;
-    font-weight: 500;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -663,7 +666,7 @@ footer p {
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 2rem;
     color: #fff;
     position: absolute;
     top: 50%;
@@ -687,21 +690,24 @@ footer p {
 
 .high1 {
     grid-area: high1;
-    background: url(imgs/GIDA/high/DSC_2132.jpg);
+    background: url(imgs/GIDA/high/DSC_2144.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: right;
     height: 100vh;
 }
 
 .high2 {
     grid-area: high2;
-    background: blue;
+    background: url(imgs/GIDA/high/DSC_2159.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .high3 {
     grid-area: high3;
-    background: url(imgs/GIDA/high/DSC_2144.jpg);
+    background: url(imgs/GIDA/high/DSC_2132.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -712,7 +718,7 @@ footer p {
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 2rem;
     color: #fff;
     position: absolute;
     top: 50%;
@@ -764,7 +770,7 @@ footer p {
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 2rem;
     color: #fff;
     position: absolute;
     top: 50%;
@@ -898,18 +904,6 @@ footer p {
 
 }
 
-
-/*
-#videoSplash {
-    width: 100%;
-    margin: 0;
-    max-width: 1000px;
-    object-fit: cover;
-
-}
-*/
-
-
 @media (min-aspect-ratio: 16/9) {
 
     #videoSplash {
@@ -944,7 +938,7 @@ footer p {
 .splash_img_om {
     margin: 150px 50px 80px 50px;
     width: 100%;
-    background: url(imgs/GIDA/aligida/DSC_1876.jpg);
+    background: url(imgs/GIDA/aligida/gida_portr%C3%A6t.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -953,7 +947,7 @@ footer p {
 .splash_img {
     margin: 150px 50px 80px 50px;
     width: 100%;
-    background: url(imgs/gida_2.jpg);
+    background: url(imgs/GIDA/78869019_441601553439427_3974776062449025024_n.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -987,6 +981,8 @@ footer p {
     font-weight: 400;
     font-style: normal;
     padding-bottom: 0px;
+    flex-grow: 1;
+    flex-basis: 333px;
 }
 
 .services p,
@@ -1000,7 +996,7 @@ footer p {
 .img_produkt {
     margin: 150px 50px 80px 50px;
     width: 100%;
-    background: url(imgs/gida_produkt.jpg);
+    background: url(imgs/produkter_img.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1029,21 +1025,24 @@ footer p {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 20vw 20vw 20vw 20vw;
-
 }
 
 .text_center button {
+    margin: 1vw;
     cursor: pointer;
     border: none;
     font-size: 0.8rem;
-    color: #3745ee;
+    color: #EE4037;
     font-weight: 500;
 }
 
+.text_center button:hover {
+    transition: 0.5s ease all;
+    color: #000;
+}
+
 .produkt_boxes {
-    margin: 1vw 1vw;
-    padding: 50px;
-    ;
+    margin: 10px 45px 45px;
 }
 
 .billede {
@@ -1057,7 +1056,7 @@ footer p {
 }
 
 #container_service {
-    position: fixed;
+    position: absolute;
     cursor: pointer;
     right: 1vw;
     bottom: 3vw;
@@ -1103,7 +1102,7 @@ footer p {
     font-size: 1.8xrem;
 }
 
-p.beskrivelse {
+p.info {
     margin: 1vw;
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 400;
@@ -1113,12 +1112,12 @@ p.beskrivelse {
 
 h2.title {
     text-align: left;
-    font-family: canada-type-gibson, sans-serif;
-    font-weight: 500;
-    letter-spacing: 3.5px;
+    font-family: neue-haas-grotesk-text, sans-serif;
+    font-weight: 400;
     font-style: normal;
-    font-size: 2rem;
-    color: #3745ee;
+    letter-spacing: 0px;
+    font-style: normal;
+    font-size: 1.5rem;
     /*    padding: 50px;*/
 }
 
@@ -1136,7 +1135,7 @@ h3.pris {
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #3745ee;
+    color: ;
     /*    padding-left: 50px;*/
 }
 
@@ -1157,6 +1156,13 @@ h3.pris {
 @media screen and (max-width: 937px) {
     .grid_con2 {
         display: none;
+    }
+
+    .low_fade_header,
+    .high_fade_header,
+    .tape_fade_header,
+    .mid_fade_header {
+        font-size: 1rem;
     }
 
     .main_nav {
@@ -1366,15 +1372,36 @@ h3.pris {
     padding-top: 10px;
 }
 
-.omgida_img {
-    padding-bottom: 45px;
+.omgida_video {
+    padding: 10px 45px 45px;
 }
 
+#om_video {
+    width: 100%;
+    max-width: none;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+@supports (object-fit: cover) {
+
+    #om_video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/*
 .omgida_img img {
     width: 100%;
     padding-right: 45px;
     padding-left: 45px;
 }
+*/
 
 .img_om {
     background: url(imgs/GIDA/aligida/DSC_1876.jpg);
@@ -1385,26 +1412,11 @@ h3.pris {
 
 .kontakt_om {
     display: flex;
-    padding-top: 50px;
-
+    padding-bottom: 20px;
 }
 
-.kontakt_header {
-    padding-left: 50px;
-    font-family: canada-type-gibson, sans-serif;
-    font-weight: 500;
-    letter-spacing: 3.5px;
-    font-style: normal;
-    font-size: 4rem;
-    padding-bottom: 10vw;
-    color: #3745ee;
-
-
-}
 
 .kontakt_oplysninger {
-    padding-right: 45px;
-    padding-left: 45px;
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -1418,11 +1430,6 @@ h3.pris {
 
 .kontakt_oplysninger img {
     max-width: 50px;
-}
-
-.videoDiv video {
-    height: 50%;
-    width: 100%;
 }
 
 .kontakt_oplysninger p {
@@ -1459,7 +1466,6 @@ h3.pris {
         flex-grow: 1;
         height: 100%;
         padding-bottom: 20px;
-        padding-right: 45px;
     }
 
     .grid-om-gide {
@@ -1478,10 +1484,16 @@ h3.pris {
         flex-direction: row;
     }
 
-    .videoDiv {
-        padding: 50px;
-        width: 100%;
+    .kontakt_oplysninger p {
+        padding-right: 20px;
+    }
 
+    .kontakt_oplysninger h2 {
+        padding-right: 20px;
+    }
+
+    .videoDiv {
+        width: 100%;
     }
 
     .kontakt_header {
