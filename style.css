@@ -322,10 +322,10 @@ footer {
     background-color: #000;
     width: 100vw;
     height: 200px;
-    margin-right: 45px;
+    margin-right: 40px;
     max-width: 1200px;
     line-height: 20px;
-    margin-left: 40px;
+    margin-left: 35px;
 }
 
 footer h2 {
@@ -629,9 +629,19 @@ footer p {
 
 
 #mid_fade {
-    height: 100vh;
+    height: calc(100vh - 80px);
     padding: 0;
     position: relative;
+}
+
+#mid_anchor,
+#high_anchor,
+#tappered_anchor {
+    position: absolute;
+    bottom: 70px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
 }
 
 .grid-mid {
@@ -684,7 +694,7 @@ footer p {
 
 
 #high_fade {
-    height: 100vh;
+    height: calc(100vh - 80px);
     padding: 0;
     position: relative;
 }
@@ -734,7 +744,7 @@ footer p {
 }
 
 #tapered {
-    height: 100vh;
+    height: calc(100vh - 80px);
     padding: 0;
     position: relative;
 }
@@ -1311,8 +1321,8 @@ h3.pris {
     .service_txt1,
     .service_txt2,
     .service_txt3 {
-        padding-right: 55px;
-        padding-left: 55px;
+        padding-right: 45px;
+        padding-left: 45px;
     }
 
     #knapper {
@@ -1358,13 +1368,6 @@ h3.pris {
         grid-area: img1;
         width: 50vw;
     }
-
-    p.info {
-        padding-left: 50px;
-    }
-
-
-
 }
 
 /*OM GIDA NY*/
@@ -1377,7 +1380,7 @@ h3.pris {
 }
 
 .omgida_txt {
-    padding: 10px 45px;
+    padding: 10px 50px;
     padding-bottom: 45px;
     line-height: 25px;
     display: flex;
