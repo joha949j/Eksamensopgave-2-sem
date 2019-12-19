@@ -61,6 +61,8 @@ p {}
     margin: 0;
     padding: 0;
     border: none;
+    height: 100%;
+    width: 100%;
 }
 
 .top-bar {
@@ -320,11 +322,10 @@ footer {
     background-color: #000;
     width: 100vw;
     height: 200px;
-    margin: 0 auto;
+    margin-right: 45px;
     max-width: 1200px;
     line-height: 20px;
-    padding-right: 90px;
-
+    margin-left: 40px;
 }
 
 footer h2 {
@@ -336,7 +337,7 @@ footer h2 {
 footer p {
     font-family: sans-serif;
     font-weight: 100;
-    font-size: 0.7em;
+    font-size: 0.9em;
 }
 
 
@@ -374,10 +375,11 @@ footer p {
 }
 
 
-#burger-menu p {
+#burger-menu {
     font-family: urbane, sans-serif;
     font-weight: 600;
     font-style: normal;
+    font-size: 0.8rem;
 }
 
 #burger-menu a {
@@ -422,7 +424,7 @@ footer p {
 
 }
 
-#burger-menu.close span p {
+#burger-menu.close .span_text {
     display: none;
 }
 
@@ -574,7 +576,10 @@ footer p {
     transform: translate(-50%, -50%);
 }
 
-#booking_fixed {
+#booking_fixed,
+#booking_fixed1,
+#booking_fixed2,
+#booking_fixed3 {
     position: absolute;
     cursor: pointer;
     right: 2vw;
@@ -638,7 +643,7 @@ footer p {
 
 .mid1 {
     grid-area: mid1;
-    background: url(imgs/GIDA/mid/DSC_1933.jpg);
+    background: url(imgs/GIDA/mid/DSC_2038.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -647,7 +652,7 @@ footer p {
 
 .mid2 {
     grid-area: mid2;
-    background: url(imgs/GIDA/mid/DSC_1929.jpg);
+    background: url(imgs/GIDA/mid/DSC_2043.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -659,6 +664,8 @@ footer p {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+
 }
 
 .mid_fade_header {
@@ -745,7 +752,6 @@ footer p {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: ;
 }
 
 .tape2 {
@@ -947,7 +953,7 @@ footer p {
 .splash_img {
     margin: 150px 50px 80px 50px;
     width: 100%;
-    background: url(imgs/GIDA/78869019_441601553439427_3974776062449025024_n.jpg);
+    background: url(imgs/service_splash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1071,9 +1077,8 @@ footer p {
     top: 5%;
     right: 8%;
     font-size: 2rem;
-    border-radius: 10px;
     border: none;
-    background-color: white;
+    background-color: transparent;
     color: #0000ff;
     cursor: pointer;
 }
@@ -1099,7 +1104,7 @@ footer p {
 
 .singleview h2 {
     text-align: left;
-    font-size: 1.8xrem;
+    font-size: 1.8rem;
 }
 
 p.info {
@@ -1118,7 +1123,6 @@ h2.title {
     letter-spacing: 0px;
     font-style: normal;
     font-size: 1.5rem;
-    /*    padding: 50px;*/
 }
 
 article {
@@ -1135,8 +1139,6 @@ h3.pris {
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: ;
-    /*    padding-left: 50px;*/
 }
 
 
@@ -1227,9 +1229,15 @@ h3.pris {
     }
 
     .footer_grid {
-        padding: 0;
+        padding-left: 0;
+
         justify-content: center;
-        margin: 0;
+        margin-left: 0;
+
+    }
+
+    footer p {
+        font-size: 0.7rem;
     }
 
     .left {
@@ -1253,6 +1261,11 @@ h3.pris {
     h3.pris {
         font-size: 1.5rem;
         padding-left: 50px;
+    }
+
+    p.info {
+        padding-left: 50px;
+        margin: 0;
     }
 
     .beskrivelse {
@@ -1346,23 +1359,34 @@ h3.pris {
         width: 50vw;
     }
 
+    p.info {
+        padding-left: 50px;
+    }
+
 
 
 }
 
 /*OM GIDA NY*/
 
-
 .omgida {
     display: flex;
     flex-direction: column;
+
+
 }
 
 .omgida_txt {
     padding: 10px 45px;
     padding-bottom: 45px;
+    line-height: 25px;
+    display: flex;
+
 
 }
+
+.gida_txt_pad {}
+
 
 .omgida_txt p,
 .omgida_txt h1 {
@@ -1378,7 +1402,6 @@ h3.pris {
 
 #om_video {
     width: 100%;
-    max-width: none;
     object-fit: cover;
     z-index: -1;
 
@@ -1443,7 +1466,7 @@ h3.pris {
 .kontakt_oplysninger h2 {
     font-family: neue-haas-grotesk-text, sans-serif;
     font-weight: 400;
-    font-style: bold;
+    font-style: normal;
     padding-top: 10px;
 }
 
@@ -1501,5 +1524,7 @@ h3.pris {
         font-size: 8rem;
     }
 
-
+    #om_video {
+        max-width: 50vw;
+    }
 }

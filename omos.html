@@ -14,17 +14,17 @@
 <body>
     <div class="main_content">
         <nav id="burger-menu">
-            <span>
-                <p>ME<br>NU</p>
+            <span> </span>
+            <span class="span_text">
+                ME<br>NU
             </span>
             <div id="menu">
                 <ul>
-                    <li><a href="forsidetest.html">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="services.html">Service</a></li>
                     <li><a href="produkter.html">Produkter</a></li>
                     <li><a href="#">Om os</a></li>
                     <li><a href="styles.html">Styles</a></li>
-
                     <li><a href="booking.html">Booking</a></li>
 
                 </ul>
@@ -32,10 +32,9 @@
         </nav>
 
         <nav class="main_nav">
-            <div class="logo"><a href="forsidetest.html">
-                    <img src="imgs/SVG/johan_logo2.svg" href="forsidetest.html" alt="logo"></a> </div>
+            <div class="logo"><a href="home.html">
+                    <img src="imgs/SVG/johan_logo2.svg" alt="logo"></a> </div>
             <ul>
-                <li><a href="forsidetest.html">Home</a></li>
                 <li><a href="services.html">Service</a></li>
                 <li><a href="produkter.html">Produkter</a></li>
                 <li><a href="#" class="active">Om os</a></li>
@@ -57,11 +56,13 @@
         <section>
             <div class="omgida">
                 <div class="omgida_txt">
-                    <h1>Ali Gida</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae atque modi numquam voluptatibus vel tempora, culpa explicabo quam assumenda. Totam minus iusto pariatur labore, itaque necessitatibus repellat impedit suscipit rerum facere accusamus quam, repellendus sit, sapiente! Eum distinctio nemo atque. Iusto assumenda, impedit similique enim quae, eveniet animi expedita vitae dolores ducimus sed quo perferendis iste rem tenetur numquam amet doloremque, eaque nihil. ! Eum distinctio nemo atque. Iusto assumenda, impedit similique enim quae, eveniet animi expedita vitae dolores ducimus sed quo perferendis iste rem tenetur numquam amet doloremque, eaque nihil</p>
+                    <div class="gida_txt_pad">
+                        <h1>Ali Gida</h1>
+                        <p>Mit navn er Ali Gida, jeg er 21 år gammel og kommer fra Syrien. Siden jeg var lille, har jeg været fascineret af frisør håndværket. Der lå en frisør i min landsby, og som barn, jeg brugte mange timer på at stå og kigge ind af vinduet. Da jeg blev ældre, startede jeg på frisørskolen i Egypten, hvor jeg lærte mine første tricks. Da min familie og jeg kom til Danmark, havde jeg faktisk ikke tænkt mig at blive frisør. Jeg ville gerne starte i skole, men stille og roligt begyndte jeg at klippe mine venner og familie, og idag har jeg egen butik, hvor jeg elsker at møde ind hver dag. Jeg er socialt anlagt, og jeg er vild med at møde nye mennesker og høre nye historier, og som barber møder du nye mennesker hver dag! Jeg håber at se dig i min shop en dag. Hos mig er der plads til alle. Vi ses!</p>
+                    </div>
                 </div>
                 <div class="omgida_video">
-                    <video id="om_video" autoplay muted loop src="fp_video.mp4"></video>
+                    <video id="om_video" controls src="ali_gida_vid.mp4"></video>
                 </div>
             </div>
         </section>
@@ -70,7 +71,7 @@
     <footer>
         <div class="footer_grid">
             <div class="maps_footer">
-                <iframe class="google_maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.6056549826467!2d12.543213115816556!3d55.695843480538166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253ad54ecc953%3A0x8218457555b8dffc!2sSorgenfrigade%206%2C%202200%20K%C3%B8benhavn!5e0!3m2!1sda!2sdk!4v1575851175006!5m2!1sda!2sdk" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
+                <iframe class="google_maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.6056549826467!2d12.543213115816556!3d55.695843480538166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253ad54ecc953%3A0x8218457555b8dffc!2sSorgenfrigade%206%2C%202200%20K%C3%B8benhavn!5e0!3m2!1sda!2sdk!4v1575851175006!5m2!1sda!2sdk" style="border:0;" allowfullscreen=""></iframe></div>
             <div>
                 <h2>Åbningstider</h2>
                 <p>man-lør. 10.00-19.00</p>
@@ -84,8 +85,8 @@
             </div>
             <div class="omgida_footer">
                 <h2>Om Gida</h2>
-                <a href="https://www.facebook.com/gidabarbershop/" target="_blank"><img src="imgs/iconfinder_online_social_media_facebook_734386.png"></a>
-                <a href="https://www.instagram.com/gida_barbershop/" target="_blank"><img src="imgs/iconfinder_instagram_online_social_media_photo_734395.png" alt="igicon"></a>
+                <a href="https://www.facebook.com/gidabarbershop/" target="_blank"><img src="imgs/iconfinder_online_social_media_facebook_734386.jpg" alt="fbicon"></a>
+                <a href="https://www.instagram.com/gida_barbershop/" target="_blank"><img src="imgs/iconfinder_instagram_online_social_media_photo_734395.jpg" alt="igicon"></a>
             </div>
         </div>
     </footer>
@@ -94,6 +95,7 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
+
     </script>
     <script type="text/javascript">
         //DESKTOP NAV ANIMATION ON SCROLL
@@ -114,5 +116,8 @@
             this.classList.toggle("close");
             overlay.classList.toggle("overlay");
         });
+
     </script>
-</body></html>
+</body>
+
+</html>

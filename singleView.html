@@ -15,12 +15,13 @@
 <body>
     <main class="main_content">
         <nav id="burger-menu">
-            <span>
-                <p>ME<br>NU</p>
+            <span> </span>
+            <span class="span_text">
+                ME<br>NU
             </span>
             <div id="menu">
                 <ul>
-                    <li><a href="forsidetest.html">Home</a></li>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="services.html">Service</a></li>
                     <li><a href="produkter.html">Produkter</a></li>
                     <li><a href="omos.html">Om os</a></li>
@@ -33,10 +34,9 @@
         </nav>
 
         <nav class="main_nav">
-            <div class="logo"><a href="forsidetest.html">
-                    <img src="imgs/SVG/johan_logo2.svg" href="forsidetest.html" alt="logo"></a> </div>
+            <div class="logo"><a href="home.html">
+                    <img src="imgs/SVG/johan_logo2.svg" alt="logo"></a> </div>
             <ul>
-                <li><a href="forsidetest.html">Home</a></li>
                 <li><a href="services.html">Service</a></li>
                 <li><a href="produkter.html">Produkter</a></li>
                 <li><a href="omos.html">Om os</a></li>
@@ -47,15 +47,17 @@
 
             </ul>
         </nav>
+        <a class="luk" href="produkter.html">←
+        </a>
 
-        <button class="luk" href="produkter.html">←</button>
+
+        <!--        <button class="luk">←</button>-->
 
         <section id="single" class="produkt_sv">
             <div class="singleview-info">
                 <article>
                     <h2 class="title"></h2>
                     <p class="info"></p>
-                    <!--                    <p class="beskrivelse">BESKRIVELSE Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis omnis molestias saepe doloribus, corrupti, voluptas iusto eos cumque facilis? Minus nam voluptas neque, blanditiis non, quas alias omnis itaque maiores fuga, possimus aspernatur doloremque distinctio incidunt beatae placeat quam quibusdam ipsam. Nisi suscipit, sapiente dolore voluptates cumque, vel earum aperiam dignissimos aspernatur reprehenderit id distinctio nobis numquam ipsam ratione tenetur?</p>-->
                     <h3 class="pris"></h3>
 
 
@@ -64,17 +66,17 @@
 
             </div>
 
-            <img class="imgvidere" src="" alt="">
+            <img class="imgvidere" src="#" alt="singeviewbillede">
 
             <template>
-                <img class="imgsingle" src="" alt="">
+                <img class="imgsingle">
             </template>
         </section>
     </main>
     <footer>
         <div class="footer_grid">
             <div class="maps_footer">
-                <iframe class="google_maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.6056549826467!2d12.543213115816556!3d55.695843480538166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253ad54ecc953%3A0x8218457555b8dffc!2sSorgenfrigade%206%2C%202200%20K%C3%B8benhavn!5e0!3m2!1sda!2sdk!4v1575851175006!5m2!1sda!2sdk" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
+                <iframe class="google_maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.6056549826467!2d12.543213115816556!3d55.695843480538166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253ad54ecc953%3A0x8218457555b8dffc!2sSorgenfrigade%206%2C%202200%20K%C3%B8benhavn!5e0!3m2!1sda!2sdk!4v1575851175006!5m2!1sda!2sdk" style="border:0;" allowfullscreen=""></iframe></div>
             <div>
                 <h2>Åbningstider</h2>
                 <p>man-lør. 10.00-19.00</p>
@@ -88,8 +90,8 @@
             </div>
             <div class="omgida_footer">
                 <h2>Om Gida</h2>
-                <a href="https://www.facebook.com/gidabarbershop/" target="_blank"><img src="imgs/iconfinder_online_social_media_facebook_734386.png"></a>
-                <a href="https://www.instagram.com/gida_barbershop/" target="_blank"><img src="imgs/iconfinder_instagram_online_social_media_photo_734395.png" alt="igicon"></a>
+                <a href="https://www.facebook.com/gidabarbershop/" target="_blank"><img src="imgs/iconfinder_online_social_media_facebook_734386.jpg" alt="fbicon"></a>
+                <a href="https://www.instagram.com/gida_barbershop/" target="_blank"><img src="imgs/iconfinder_instagram_online_social_media_photo_734395.jpg" alt="igicon"></a>
             </div>
         </div>
     </footer>
@@ -133,7 +135,9 @@
                 if (produkt.id == id) {
 
                     document.querySelector(".imgvidere").src = produkt.billed[0].guid;
+                    document.querySelector(".imgvidere").alt = produkt.title.rendered + " imgvidere";
                     console.log("lol");
+
                     document.querySelector(".imgcontainer").src = produkt.billed[0].guid;
                     console.log("lol2");
 
@@ -184,5 +188,8 @@
         });
 
         AOS.init();
+
     </script>
-</body></html>
+</body>
+
+</html>
