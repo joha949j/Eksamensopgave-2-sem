@@ -74,7 +74,7 @@
 
             </div>
 
-            <img class="imgvidere" src="#" alt="singeviewbillede">
+            <img class="imgvidere" src="#" alt="singleViewbillede">
 
             <template>
                 <img class="imgsingle">
@@ -114,7 +114,7 @@
         const skabelon = document.querySelector("template");
         const liste = document.querySelector(".produkt_boxes");
         let menuArray;
-        const produkterUrl = "http://mathiaswind.dk/kea/Gida/wordpress/wp-json/wp/v2/produkter/";
+        const produkterUrl = "https://mathiaswind.dk/kea/Gida/wordpress/wp-json/wp/v2/produkter/";
 
 
         window.addEventListener("load", sidenVises);
@@ -143,7 +143,7 @@
                 if (produkt.id == id) {
 
                     document.querySelector(".imgvidere").src = produkt.billed[0].guid;
-                    document.querySelector(".imgvidere").alt = produkt.title.rendered + " imgvidere";
+                    //                    document.querySelector(".imgvidere").alt = produkt.title.rendered + " imgvidere";
                     console.log("lol");
 
                     document.querySelector(".imgcontainer").src = produkt.billed[0].guid;
