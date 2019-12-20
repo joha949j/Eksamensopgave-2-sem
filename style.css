@@ -1040,16 +1040,29 @@ footer p {
     width: 80vw;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 20vw 20vw 20vw 20vw;
+    grid-template-columns: 40vw 40vw;
+    grid-template-rows: 20vw 20vw;
 }
+
+.produkt_boxes .billede {
+    cursor: pointer;
+}
+
+
+.billede:hover {
+    transform: scale(1.05);
+    transition: 0.2s all ease-out;
+}
+
 
 .text_center button {
     margin: 1vw;
     cursor: pointer;
     border: none;
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: #EE4037;
     font-weight: 500;
+    background-color: white;
 }
 
 .text_center button:hover {
@@ -1326,10 +1339,11 @@ h3.pris {
     }
 
     #knapper {
-        width: 600px;
+        width: 80vw;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 20vw 20vw 20vw 20vw;
+        grid-template-rows: 0;
     }
 
     .text_center button {
